@@ -15,7 +15,7 @@ class CitizenNews extends Thread{
     }
     @Override
     public void run() {
-        p.chapisha("John");
+        p.chapisha("John ");
     }
 }
 
