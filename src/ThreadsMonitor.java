@@ -1,4 +1,4 @@
-class MyData{
+class MyDdata{
    synchronized public void display(String str){
         for (int i=0;i<str.length();i++){
             System.out.print(str.charAt(i));
@@ -7,8 +7,8 @@ class MyData{
 
 }
 class MyThread1 extends Thread{
-    MyData d;
-    MyThread1(MyData dat){
+    MyDdata d;
+    MyThread1(MyDdata dat){
         d=dat;
     }
 
@@ -18,8 +18,8 @@ class MyThread1 extends Thread{
     }
 }
 class MyThread2 extends Thread{
-    MyData data;
-    MyThread2(MyData dat){
+    MyDdata data;
+    MyThread2(MyDdata dat){
         data =dat;
     }
 
@@ -30,7 +30,7 @@ class MyThread2 extends Thread{
 }
 public class ThreadsMonitor {
     public static void main(String[] args) {
-        MyData d=new MyData();
+        MyDdata d=new MyDdata();
         MyThread1 th1=new MyThread1(d);
         MyThread2 th2=new MyThread2(d);
         th1.start();
